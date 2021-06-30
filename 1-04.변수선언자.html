@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var 선언자
+        var x = 5; // 변수 x에 5를 저장
+        var y = 6; // 변수 y에 6을 저장
+        var z = x + y; // z에는 11이 저장
+        console.log("x = ",x,"y = ", y,"z = ", z);
+
+        var x = 7; // 재선언
+        z = x + y; // 이미 선언한 변수에 새로운 값을 할당
+        console.log("x = ",x,"z = ",z);
+
+
+        // let
+        let x1 = 5; // 변수 x1에 5를 저장
+        let y1 = 6; // 변수 y1에 6을 저장
+        var z1 = x1 + y1; // z1에는 11이 저장
+
+        //let x1 = 7; // 재선언 불가능
+        x1 = 7; // 재할당은 가능
+
+
+        // const
+        const PI = 3.14;
+
+        //const PI = 2.12; // 재선언 불가능
+        //PI = 2.12; // 재할당 불가능
+    </script>
+</body>
+</html>
