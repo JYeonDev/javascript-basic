@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = 0.1 + 0.2;
+        // console.log(x);
+        // 0.30000000000000004
+
+        console.log(1/2); // 0.5    유한소수
+        console.log(2/3); // 0.66666....    무한소수
+
+        // 0.1 = 1/10
+        // 0.2 = 1/5
+
+        // 64비트부동소수점 64비트까지 표시하고 65번째는 반올림
+
+        // 1비트 - 양수면 0, 음수면 1
+        // 11비트 - 지수부 - 2^(n-1)-1 + m
+        // 2의 (n(비트)-1) 승 -1 + m    m은 소수점에 숫자 1이 나올때까지 몇번 이동했는지를 나타냄. 오른쪽으로 옮기면 - 왼쪽으로 옮기면 +
+        // 공식을 대입해 계산하면 1019  2진수로 바꾸면 11111111011
+        // console.log((1019).toString(2)); toString은 문자열로 바꿔주는 내장함수이다. ()에 숫자를 넣으면 *진수로 나타내줌
+        // 52비트 - 가수부
+
+        // 결론 - 자바스크립트는 정확한 값을 출력하지 않는다.
+        // 근사치에 가까운 값을 출력한다. 그렇기 때문에 정확한 값을 요구하는 웹페이지를 제작시 주의해야한다.
+        // 너무 어려운 내용이기 때문에 나중에 다시 공부
+    </script>
+</body>
+</html>
