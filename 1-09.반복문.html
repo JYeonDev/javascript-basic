@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 반복문 - 조건이 만족하는 동안에 계쏙해서 {} 코드를 실행
+        // for(조건) {
+        //    실행문
+        //}
+
+        for(var i = 0; i < 5; i++){
+            if(i == 3) {
+                //break;
+                continue;
+                // continue 조건 만족시 무시하고 실행
+            }
+            console.log("The number is" + " " + i);
+        }
+
+        var i = 1;
+        var len = 10;
+        var total = 0;
+        for(; i <=10;) {
+            total = total + i;
+            i++;
+        }
+        // for문 앞에 변수값을 미리설정한 경우에는 생략가능 (;만 입력)
+        console.log(total);
+
+        var numbers = [43,23,5,7];
+        var len = numbers.length;
+        for(var i = 0; i < len; i++){
+            console.log(numbers[i]);
+        }
+
+        // for - in (배열,오브젝트) 반복문
+        for(var i in numbers){
+            // numbers 배열에 인덱스를 순서대로 i에 집어넣어 반복한다.
+            console.log(numbers[i]);
+        }
+
+        var person = {firstName:"jy", lastName:"kim", age: 27};
+
+        for(var key in person){
+            console.log(person[key]);
+        }
+        // 오브젝트안에 key값을 받아온다.
+
+        
+        // for of - 배열안에 있는 값을 하나씩 가져온다.
+        for(var num of numbers){
+            console.log(num);
+        }
+
+        
+        // while(조건){실행문}
+        var i = 1;
+        var total = 0;
+        while(i <=10){
+            total = total + i;
+            i++;
+        }
+        console.log(total);
+
+        
+        // do - while
+        var i = 1;
+        var total = 0;
+        do {
+            total = total + i;
+            i++;
+        }while(i <=10);
+        console.log(total);
+        /* 
+        while 문과 do-while문의 차이점
+        while문은 해당조건이 맞는지를 먼저 판별하고 실행하지만
+        do-while문은 do{}안에 있는 실행문을 먼저 실행시키고 조건을 판별한다.
+        그렇기 때문에 조건에 맞지 않아도 첫 실행문은 실행된다.
+        */
+    </script>
+</body>
+</html>
