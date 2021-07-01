@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // length - 문자열에서 length는 글자의 길이
+        var txt = "ABCDEFGHIJKLMN";
+        console.log(txt.length);    // 문자열에서 length는 글자의 길이
+
+
+        // indexOf - indexOf()에서 ()안의 내가 찾고자하는 문자열이 존재하는지 찾아준다.
+        // 찾고자하는 문자열이 존재하지 않으면 -1 반환 있으면 시작지점 인덱스 반환
+        var str = "please locate where 'locate'";
+        console.log(str.indexOf("locate"));
+
+        if(str.indexOf("locate") > -1){
+            console.log("locate문자 발견");
+        }
+
+
+        // lastIndexOf - indexof와 개념은 같으나 lastIndexOf는 마지막 문자열을 찾아준다.
+        console.log(str.lastIndexOf("locate"));
+
+
+        // search - indexOf와 같은 기능
+        console.log(str.search("locate"));
+        
+
+        // slice - slice(시작점, 끝점) 시작점에서부터 끝점사이에 있는 인덱스를 뽑아낸다.
+        // 단, 끝점은 만약 13이라면 12인덱스까지 해당된다.
+        // 끝점을 지정안해주면 시작점뒤로 모든 인덱스 출력
+        // -를 쓰면 뒤에서 부터 시작 -는 시작인덱스가 0이 없다. -1부터 시작
+        var str = "Apple, Banana, Kiwi";
+        console.log(str.slice(7,13));
+        console.log(str.slice(7));
+        console.log(str.slice(-12, -6));
+
+
+        // substring - slice와 같은 기능
+        console.log(str.substring(7,13));
+
+        
+        // substr - substr(시작점, 가져올글자수)
+        console.log(str.substr(7, 6));
+
+
+        var birthday = "950825";
+        console.log(birthday.substr(0, 2));
+        console.log(birthday.substr(2, 2));
+
+        var birthday = "1995-08-25";
+        console.log(birthday.substring(0,birthday.indexOf("-")));
+
+        // replace  replace(바꾸고싶은부분,바꿀부분);
+        var str = "please visit here!";
+        var str2 = str.replace("here", "there");
+        console.log(str2);
+
+        var str = "please visit here here here!";
+        var str2 = str.replace("here", "there");
+        console.log(str2);
+        // 첫번째 부분만 바뀜
+
+        var str = "please visit here HERE here!";
+        var str2 = str.replace(/here/gi, "there");
+        console.log(str2);
+        // /here/gi 정규식 g = 글로벌 i = 대소문자구분 x
+
+
+        // uppercase - 대문자로 변환
+        console.log(str.toUpperCase());
+
+
+        // lowercase - 소문자로 변환
+        console.log(str.toLowerCase())
+
+
+        // concat - 문자열을 결합시켜준다.
+        var txt1 = "Hello";
+        var txt2 = "World";
+        var txt3 = txt1 + " " + txt2;
+        console.log(txt3);
+        var txt4 = txt1.concat(" ",txt2);
+        console.log(txt4);
+
+        // trim - 앞뒤 공백을 제거해준다.
+        var str = "       Hello world       ";
+        console.log(str);
+        console.log(str.trim());
+
+        
+        // padStart padStart(글자수, 채워줄 문자) 앞에 채워줌
+        var str = "5";
+        console.log(str.padStart(4,0));
+
+        // 실무 사용예) 24시를 표현할때 1~9시 앞에 0 을 붙이고 싶을 때 사용하거나 한다.
+
+        
+        // padEnd padstart와 동일하나 뒤에 채워줌
+        console.log(str.padEnd(4,0));
+
+
+        // charAt - 내가 원하는 위치에 있는 글자를 가져온다.
+        var str = "Hello world";
+        console.log(str.charAt(0));
+        // Hello world의 0번째 인덱스 H를 가져옴
+
+
+        // split - 배열로 나눈다.
+        var tags = "키보드,기계식,블루투스";
+        var arr = tags.split(",");
+        console.log(arr);
+
+        var birthday = "1997-06-12";
+        var arr2 = birthday.split("-");
+        console.log(arr2);
+    </script>
+</body>
+</html>
