@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // if, switch
+
+        /* 
+        if(조건){
+            실행문
+        }
+        */
+        var age = 19;
+        var isAdult = false
+        if(age > 18) {
+            isAdult = true;
+        }
+
+        // else  조건에 만족하지 못한 경우
+
+        var hour = 14;
+        if (hour < 10) {
+            console.log("Good morning");
+        } else if (hour < 18) {
+            console.log("Good afternoon")
+        } else if (hour < 21) {
+            console.log("Good evening")
+        } else {
+            console.log("Good night")
+        }
+
+        // else if  새로운 조건 추가
+
+
+        // switch
+
+        var d = new Date();
+        var day = d.getDay();
+        console.log(day);
+        var dayName = "";
+        
+        switch (day) {
+            case 0:
+                dayName = "일요일";
+                break;
+            case 1:
+                dayName = "월요일";
+                break;
+            case 2:
+                dayName = "화요일";
+                break;
+            case 3:
+                dayName = "수요일";
+                break;
+            case 4:
+                dayName = "목요일";
+                break;
+            default:
+                dayName = "";
+                break;
+                // default는 해당조건에 맞는게 없을시 실행되는 조건
+        }
+        console.log(dayName);
+        // 해당 케이스에 조건에 맞으면 break 가 걸려서 조건문이 종료된다.
+    </script>
+</body>
+</html>
