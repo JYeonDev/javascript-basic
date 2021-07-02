@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <script>
+        var d = new Date(); // 현재날짜 및 시간 출력
+        console.log(d);
+
+        d.setFullYear(2020); // 강제로 년도를 바꿔 버릴수 있다. 나머지도 동일
+
+        // 세계시간 시차를 알려준다. 분 단위로 나타냄   나타난 시간에 * -1 을 해서 더해주면 됨
+        console.log(d.getTimezoneOffset());
+
+        var year = d.getFullYear(); // 현재 년도 출력
+        var utcYear = d.getUTCFullYear();
+        console.log(year);
+
+        var month = d.getMonth(); // 현재 월 출력 현재 월에 -1 이 찍힘
+        var utcMonth = d.getUTCMonth(); // 나머지도 동일 utc 붙여주면 utc 기준으로 불러옴
+        console.log(month);
+
+        var day = d.getDate(); // 현재 일 출력
+        console.log(day);
+
+        var day = d.getDay(); // 현재 요일 출력
+        console.log(day);     // 일요일 - 0, 월요일 - 1, 화요일 - 2, 수요일 - 3, 목요일 - 4, 금요일 - 5, 토요일 - 6
+
+        var hour = d.getHours(); // 현재 시 출력
+        var minute = d.getMinutes(); // 현재 분 출력
+        var second = d.getSeconds(); // 현재 초 출력
+        // 주의 ! Date 객체에 나오는 시간 및 날짜는 내 local pc 를 기준으로 한다.
+
+        // utc (협정 세계시)
+        var d = new Date();
+        var utcYear = d.getUTCFullYear();
+
+        // 타임존
+        // 국가마다 시간이 다르기 때문에 국가에 맞게 시간을 DB에서 맞춰줘야 한다.
+        // 2021.03.30 12:23:33  한국
+        // 작성일 : 2021.03.30 12:23:33
+        // 2021.03.30 03:23:33  영국
+
+        var d = new Date(2021, 3, 27, 11, 14, 23);  // 년 월 일 시 분 초
+        // 년 월 일 중   월만 1월이 0부터 시작한다. 12월을 나타내고 싶으면 11
+        console.log(d);
+
+
+        // 구글 검색 moment.js  날짜 시간을 다루는 라이브러리 대부분의 개발자들이 사용함
+        // moment.js cdn
+
+        console.log(moment().format("YYYY-MM-DD"));
+        console.log(moment().format("MMM DD, YYYY"));
+
+        console.log(moment().subtract(7, "days").format("MMM DD, YYYY"));
+        console.log(moment().add(7, "days").format("MMM DD, YYYY"));
+        console.log(moment().add(7, "hours").format("MMM DD, YYYY HH"));
+    </script>
+</body>
+</html>
