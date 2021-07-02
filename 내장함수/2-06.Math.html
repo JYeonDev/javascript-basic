@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // round() - 반올림     ★★자주쓰임
+        console.log(Math.round(4.9)); // 5
+        console.log(Math.round(4.4)); // 4
+
+        // ceil() - 올림        ★★자주쓰임
+        console.log(Math.ceil(4.2)); // 5 소수점 이하는 올린다.
+        console.log(Math.ceil(-4.2)); // 4 무조건 올리기 때문에
+        // 강사님은 실무에서 페이징 처리할때 사용하셨다고 한다.
+        // 72 건의 게시글이 있는 게시판이 있다고 치면
+        // 1페이지에 10개씩 처리를 하고싶으면
+        // Math.ceil(72/10) 으로 처리를 해주면 10개씩 1페이지로 마지막 2건까지해서 8페이지가 나온다.
+
+
+        // floor() - 내림   소수점 이하는 내린다.       ★★자주쓰임
+        console.log(Math.floor(9.9)); // 9
+        console.log(Math.floor(-4.2)); // -5 무조건 내리기 때문에
+        
+        // trunc() - 정수부분만 리턴
+        console.log(Math.trunc(9.9)); // 9
+        console.log(Math.trunc(-4.2)); // -4
+
+        
+        // sign() - 음수인지 양수인지 판별해준다. 음수면 -1 양수면 1 0이면 0        ★★자주쓰임
+        console.log(Math.sign(-7)); // -1
+        console.log(Math.sign(7)); // 1
+        console.log(Math.sign(0)); // 0
+
+
+        // pow() - 제곱
+        console.log(Math.pow(8,2)); // 8의 2승 64
+
+
+        // sqrt() - 루트
+        console.log(Math.sqrt(64)); // 8
+
+
+        // abs() - 무조건 양수로 변환       ★한번씩쓰임
+        console.log(Math.abs(-4.7)); // 4.7
+
+
+        // max() - 가장 큰 값을 찾아줌
+        console.log(Math.max(0,150,23,45,-28,77));
+
+
+        // min() - 가장 작은 값을 찾아줌
+        console.log(Math.min(0,150,23,45,-28,77));
+
+
+        // random() - 0~1사이의 숫자(소수) 랜덤         ★★자주쓰임
+        var x = Math.random();
+        console.log(x);
+        var x = Math.floor((Math.random() * 10) + 1); // 1~10
+        console.log(x);
+        var x = Math.floor((Math.random() * 100) + 1); // 1~100
+        console.log(x);
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        console.log(getRndInteger(10,20));
+    </script>
+</body>
+</html>
