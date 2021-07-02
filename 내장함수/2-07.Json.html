@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JSON(JavaScript Object Notation)
+        // 서버로부터 웹페이지로 데이터를 전송할때 자주 사용
+        // 웹페이지에서 서버로 데이터를 전송할 때도 JSON포맷 자주사용
+
+        var data = {
+            "employees": [
+                {"firstName":"John", "lastName":"Doe"},
+                {"firstName":"John", "lastName":"Doe"},
+                {"firstName":"John", "lastName":"Doe"}
+            ]
+        }
+        // 오브젝트는 키에 "" 사용하지 않지만 json은 키에도 "" 사용해야한다.
+
+        // JSON.stringify - JSON객체를 문자열로 바꿔준다.
+        console.log(data);
+
+        console.log(JSON.stringify(data));
+
+
+        // JSON.parse - 문자열을 JSON객체로 바꿔준다.
+    </script>
+</body>
+</html>
