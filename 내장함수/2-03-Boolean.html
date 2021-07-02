@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = true;
+        var y = new Boolean(true);
+        //new를 통해 선언가능
+
+        console.log(typeof x);  // boolean
+        console.log(typeof y);  // object
+        console.log(x == y);    // 값만 비교하기 때문에 true
+        console.log(x === y);   // 값과 데이터 둘 다 비교하기 때문에 false
+
+        console.log(Boolean(10 > 9));
+        console.log(10 > 9);
+
+        var x = 1;
+        console.log(x);
+        console.log(Boolean(x));    // true 1을 제외한 모든것은 false
+
+        var s = "abc";
+        var s2 = new String("abc");
+        var n = new Number(123);
+        // 문자열 숫자도 마찬가지
+    </script>
+</body>
+</html>
