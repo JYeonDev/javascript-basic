@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>저장</button>
+    <script>
+        // console.log(window);
+
+
+        // alert() - 확인창
+        alert("하위~ 바위~");
+
+        // confirm() - 확인 취소창
+        var yn = confirm("정말 삭제하시겠습니까?");
+        console.log(yn);
+
+        if (yn == true){
+            //삭제실행
+        } else {
+            // 저장
+        }
+
+
+        // prompt() - 입력창
+        var txt = prompt("비밀번호를 입력하세요");
+        console.log(txt);
+        if(txt == null) {
+            // 취소
+        }else if(txt == ""){
+            // 빈값
+        }else if(txt != ""){
+            // 입력
+        }
+
+
+        // window.open() - 해당 url로 이동
+        // window.open("https://naver.com")
+
+        // window.print() - 해당페이지 인쇄창 생성
+
+        // setTimeout(function(){   - 비동기 지정시간 지난후 실행
+        //    
+        // }, 밀리초);
+        setTimeout(function(){
+            console.log("바로 안뜸");
+        }, 3000);
+
+
+        // setInterval(function(){  - 비동기 지정시간마다 반복 실행
+        //    
+        // }, 밀리초);
+        var i = 0;
+        var fnc = setInterval(function(){
+            console.log("바로 안뜸" + i);
+            if(i == 3){
+                clearInterval(fnc);
+            }
+            i++;
+        }, 3000);
+
+        // clearInterval() - setInterval 을 제거해준다.
+        // clearTimeout() - setTimeout 을 제거해준다.
+    </script>
+</body>
+</html>
