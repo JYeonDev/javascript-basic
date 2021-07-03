@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Hello World");     // 기록
+        console.info("Hello World");    // 정보
+        console.warn("Hello World");    // 경고
+        console.error("Hello World");   // 에러
+
+        var userList = [
+            {firstName: "재석", lastName: "유", email:"yu@gmail.com"},
+            {firstName: "종국", lastName: "김", email:"kim@gmail.com"},
+            {firstName: "석진", lastName: "지", email:"yang@gmail.com"},
+            {firstName: "세찬", lastName: "양", email:"ji@gmail.com"}
+        ];
+
+        console.log(userList);
+        console.table(userList); // 테이블표로 나타낸다
+
+        console.time(); // 실행속도를 알수있다.
+        console.timeEnd();  // 실행속도를 알수있다. console.start와 같이 사용해야한다.
+
+
+        console.log("This is %cstyle message.","color:red;background-color:blue;padding:20px");
+        // console.log에도 css 속성을 입히는게 가능하다. (쓸일 거의 x)
+    </script>
+</body>
+</html>
