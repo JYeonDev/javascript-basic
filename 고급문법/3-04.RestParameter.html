@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(x1, x2) {
+            var y = x1 + x2;
+            console.log(y);
+
+            return y;
+        }
+
+        sum(5, 7)
+
+        function sum2(x1, x2, x3) {
+            var y = x1 + x2 + x3;
+            console.log(y);
+
+            return y;
+        }
+
+        sum2(5, 7, 10);
+
+
+        // 파라미터의 갯수가 정해져 있지 않을 때 ...파라미터를 사용하면 갯수와 상관없이 파라미터를 쓸수있다. 단 파라미터는 배열값으로 처리된다.
+        function sum3(...args) {
+           var total = 0;
+           // for(var x of args){
+           //     total +=x;
+           // }
+           args.forEach(function(x, index){    // forEach는 배열 내장함수이다. 배열을 한번씩 실행한다.
+            console.log(index);
+            total += x;
+           });
+           console.log(total);
+           return(total);
+        }
+
+        sum3(5, 7, 10, 20, 3, 6, 34);
+    </script>
+</body>
+</html>
