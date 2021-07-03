@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Scope - 변수에 대한 접근성을 의미한다.
+
+        //local scope(지역범위)
+        function myFunction(){
+            var carName = "Hyundai";
+            console.log(carName);
+        }
+        
+        myFunction();
+        // console.log(carName);   // 에러발생
+
+        // global scope(전역범위)
+        var carName2 = "KIA";
+
+        // myFunction2();    선언보다 호출을 먼저해도 에러없이 실행이 된다. 자바스크립트 특성상 함수 선언문을 먼저 읽고 호출을 한다고 한다.
+
+        function myFunction2(){
+            console.log(carName2);
+        }
+
+        myFunction2();
+
+        // myFunction3();   함수를 변수에 담으면 순서대로 읽히기 때문에 에러가 발생한다.
+
+        var myFunction3 = function() {
+            console.log(carName2);
+        }
+
+        myFunction3();  // 함수를 변수에 담아서 호출도 가능
+    </script>
+</body>
+</html>
