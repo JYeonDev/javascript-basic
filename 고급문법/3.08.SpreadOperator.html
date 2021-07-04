@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Spread Operator - 배열을 각 요소 별로 분해해준다.
+
+        var arr1 = [4,5,6];
+        var arr2 = [1,2,...arr1,3];
+        var arr3 = [...arr2,...arr1];
+        console.log(arr2);
+        console.log(arr3);
+
+        var cd = "CD";
+        var kor = "김종연"
+        var alphabet = ['a', 'b', ...cd, ...kor];
+        console.log(alphabet);
+    </script>
+</body>
+</html>
