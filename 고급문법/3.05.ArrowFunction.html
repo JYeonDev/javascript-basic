@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hello(){
+            console.log("Hello World");
+            return "Hello World";
+        }
+
+        var hello = function hello(){
+            console.log("Hello World");
+            return "Hello World";
+        }
+        var hello = () => "Hello World";
+        // {}를 생략하면 return값이 된다.
+
+        // var hello = () => {
+        //     console.log("Hello World");
+        //     return "Hello World";
+        // }
+
+        var hello = fullName => "Hello " + fullName;
+        // 파라미터가 1개라면 ()도 생략이 가능하다. 2개이상은 생략 불가능
+
+        console.log(hello("JY"));
+
+        var hello = (fullName, lastName) => "Hello " + fullName + " " + lastName;
+        
+        console.log(hello("JY", "KIM"));
+    </script>
+</body>
+</html>
