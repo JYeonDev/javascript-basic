@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- axios(오픈소스 라이브러리) -->
+    <script>
+        // var x = 1;
+        
+        // 가정) 중간에 서버 호출해서 데이터를 받아오는 함수가 있다.
+        // y = callServerData();
+
+        // var z = x + 2;
+
+        // var url = "서버로 부터 받아온 url";
+        // // 현재 서버가 없기 때문에 에러발생 있다는 가정하에 실행
+        // var data = axios.get("url").then(function(response){
+        //     // get 서버로 부터 url을 가져왔다면 then response 출력
+        //     return response.data;
+        //     // 서버로 부터 받아온 데이터 출력
+        // });
+
+        function getData(){
+            // promise
+
+            return new Promise(function(resolve, reject){
+                // resolve - 정상 수행되었을때 / reject - 에러가 발생했을 때
+                        axios.get("url").then(function(response){
+                        resolve(response.data);
+                });
+            });
+        }
+
+        var total = 0;
+
+        getData().then(function(data){
+
+        });
+
+        for(var item of data){
+            total += item.price;
+        }
+        console.log(total);
+        // 에러발생
+    </script>
+</body>
+</html>
