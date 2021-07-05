@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getScores(){
+            return [70,80,90];
+        }
+
+        var scores = getScores();
+        console.log(scores);
+        console.log(scores[0]);
+        
+        var [x,y,z] = getScores();
+        console.log(y);
+
+
+        // 실무의 예 ) 위도, 경도
+        function getLocation(){
+            return [123.12, 23.023];
+        }
+
+        var [latitude, longitude] = getLocation();
+
+        console.log(latitude);
+    </script>
+</body>
+</html>
