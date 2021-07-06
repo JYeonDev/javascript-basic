@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try {
+            consol.log("log메시지");
+        } catch(err) {
+            console.log(err.name);
+            console.log(err.message);
+        }
+
+        
+        var x = "";
+
+        try {
+            if(x == "") throw "empty"; // throw 를 사용하여 강제로 에러값으로 던진다.
+
+            var y = x + 3;
+        } catch(err) {
+            console.log(`x is ${err}`);
+        } finally {
+            // try/catch 문 이후에 반드시 실행되는 문구
+            consolE.log("try/catch문 제일 마지막에 반드시 실행");
+        }
+    </script>
+</body>
+</html>
