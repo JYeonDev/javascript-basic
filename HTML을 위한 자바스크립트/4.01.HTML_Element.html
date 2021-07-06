@@ -1,0 +1,34 @@
+document = HTML 문서와 관련된
+
+document.getElemntById() = html 태그의 id를 가져온다.
+
+document.quertySelector() = 아이디(#을 붙여줘야함) 혹은 클래스(.을 붙여줘야함)를 가져온다. Jquery 선택자와 유사하다.
+
+* input의 value의 접근 가능하다.
+  ex) var save = document.querySelector("#mini");
+        console.log(save.value);
+        input#mini의 value 콘솔창에 출력
+      var saveValue = save.value;
+
+      var oCheckbox = document.getElemntsName("chk_interest");
+        chk_interest name을 가진 체크박스를 모두 가져온다.
+        console.log(oCheckbox);
+        for(var i = 0; i < oCheckbox.length; i++){
+            if(oCheckbox[i].checked){
+                console.log(oCheckbox[i].value);
+            }
+        }
+        체크된 체크박스의 value를 가져오는 반복문
+      
+      var oCheckbox2 = document.querySelectorAll("[name=chk_interest]:checked");    <-- 체크박스의 checked 된 태그들만 가져옴 querySelector보다 간결함
+        chk_interest name을 가진 체크박스를 모두 가져온다.
+        console.log(oCheckbox2);
+
+      var oRadio = document.querySelector("[name=radio_email_yn]:checked");
+      console.log(oRadio);
+        querySelectorAll는 배열형태로 가져온다.
+        querySelector는 하나만 가져오기 때문에 태그 자체를 가져온다.
+
+    innerText
+    innerHTML
+      
