@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 정규식 (Regular Expression)
+
+        var patt = /World/i;
+        // /World/ - 패턴   i - modifier(모디파이어)
+
+        var str = "Hello WORLD! world!";
+        console.log(str.search("World"));
+
+        console.log(str.search(/World/i));
+        // i - 대소문자 구분 x
+
+        console.log(str.replace("world", "Jeremy"));
+
+        console.log(str.replace(/WORLD/ig, "Jeremy")); // g - global 해당패턴 모두
+
+        var str = "Is this all there is";
+        var patt1 = /[hat]/g; // /[abc]/ - a,b,c 가 해당된 문자를 다 찾는다.
+        var result = str.match(patt1); // match - 정규식을 의미
+        console.log(result);
+
+        
+        var str = "123abc4523kkk";
+        var patt1 = /[0-9]/g; // /[0-9]/ 0부터 9까지 숫자를 모두 찾는다.
+        var result = str.match(patt1);
+        console.log(result);
+
+
+        var str = "re, green, red, gree, gen, red, blue";
+        var patt1 = /(red|green)/g;     // /(red|green)/ red 혹은 green을 모두 찾는다.
+        var result = str.match(patt1);
+        console.log(result);
+
+        
+        var str = "Give 100";
+        var patt1 = /\d/g;  // /\d/ 0부터 9까지 숫자를 모두 찾는다.
+        var result = str.match(patt1);
+        console.log(result);
+
+        var str = "Give 100  100   100";
+        var patt1 = /\s/g;  // /\s/ 공백이 몇개 있는지 찾는다.
+        var result = str.match(patt1);
+        console.log(result);
+
+
+        var str = "HELLO, LOOK AT ME!";
+        var patt1 = /\bLO/g;    // /\b/ - /\bLO/ LO가 시작되는 지점을 찾는다.
+        var result = str.search(patt1);
+        console.log(result);
+
+
+        var str = "Hellooo";
+        var patt1 = /o+/g;  // /문자+/ - 문자와 동일한 문자를 찾아준다. 한 배열로 생성. 문자가 최소한 1개이상 있어야한다. 
+        console.log(str.match(patt1));
+
+
+        var str = "Helloooo World";
+        var patt1 = /lo*/g; // /문자*/  문자의 해당하는 문자들을 모두 찾는다. 패턴이 있음. /lo*/g -> /ol*/g 로 바꾸면 다른 결과 생성 
+        // ex) "Helloooo World"; /lo*/g    ["l","loooo", "l"]
+        console.log(str.match(patt1));
+
+
+        var str = "1, 100 or 1000";
+        var patt1 = /10?/g; // /문자?/  0개 이거나 1개          잘 모르겠음 따로 찾아보자
+        console.log(str.match(patt1));
+
+        // 그 외 정규식이 많으나 기본적인건 이 정도이고 다른 부분까지 공부하고 싶으면
+        // https://www.w3schools.com/jsref/jsref_obj_regexp.asp <-- w3schools   참조
+        
+
+        // 실무의 예
+        // 우편번호 5자리
+        // 32543
+
+        var patt1 = /^\d{5}$/ // 숫자 5자리를 의미      ^ - 반드시 ^뒤에 오는걸로 시작해야 함.  $ - 끝 마침을 의미함.
+        var postalcode = "P23452Z";
+        console.log(patt1.test(postalcode)); // test() 정규식 내장함수   true/false 값을 리턴한다. 
+
+
+        // 전화번호
+
+        var patt1 = /^(010)-\d{4}-\d{4}$/;
+        var phoneNumber = "010-2312-3354";
+        console.log(patt1.test(phoneNumber));
+
+
+        // 이메일 주소  <실무에서 정말 많이 쓰임>★★★★★
+        var patt1 = /^\w+([\.-]?\w+)*@\w+(\.\w{2,3})+$/   // w -문자열  d - 숫자열 \ - 특수문자를 일반문자로 바꿀때 사용한다.(.은 특수문자로 쳐서 일반문자로 바꿔줌)
+        console.log(patt1.test("ker032@naver.com"));
+    </script>
+</body>
+</html>
