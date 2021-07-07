@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        focus: blur:
+        <br />
+        <input type="text" id="text1" onfocus="doFocus();" onblur="doBlur(this);"/> <!-- onBlur - focus 가 빠져 나갔을 때 -->
+        <br />
+        select:
+        <br />
+        <select id="select1" onchange="doChange();">
+            <option value="KO">Korea</option>
+            <option value="CN">China</option>
+            <option value="JP">Japan</option>
+        </select>
+        <br />
+        keydown:
+        <br />
+        <input type="text" id="text2" onkeydown="doKeydown(event);" />
+        <button type="button" onclick="doSearch();">조회</button>
+        <br />
+        <button onclick="doSave();">Click</button>
+        <br />
+
+        <script>
+            function doFocus() {
+                console.log("Focus");
+            }
+
+            function doBlur(obj) {
+                if(obj.value == "") {
+                    alert("필수값입니다.");
+                }
+                console.log(obj.value);
+            }
+
+            function doChange() {
+                var selectedValue =  document.getElementById("select1").value;
+                console.log(selectedValue);
+            }
+
+            function doSearch() {
+                if(event.keyCode == 13) {   // 13 - enter
+                    doSearch();
+                }
+            }
+
+            function doKeydown(event) {
+                console.log(event);
+            }
+
+            function doSave() {
+                console.log("save")
+            }
+        </script>
+    </body>
+</html>
